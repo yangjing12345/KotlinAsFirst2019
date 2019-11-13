@@ -83,7 +83,7 @@ fun angleInRadian(deg: Int, min: Int, sec: Int): Double = deg * Math.PI / 180 + 
  * Найти длину отрезка, соединяющего точки на плоскости с координатами (x1, y1) и (x2, y2).
  * Например, расстояние между (3, 0) и (0, 4) равно 5
  */
-fun trackLength(x1: Double, y1: Double, x2: Double, y2: Double): Double = Math.sqrt(Math.pow((x1 - x2), (x1 - x2)) + Math.pow((y1 - y2), (y1 - y2)))
+fun trackLength(x1: Double, y1: Double, x2: Double, y2: Double): Double = Math.sqrt(Math.pow((x2 - x1), (x2 - x1)) + Math.pow((y2 - y1), (y2 - y1)))
 
 /**
  * Простая

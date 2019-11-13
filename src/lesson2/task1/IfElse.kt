@@ -76,7 +76,19 @@ fun timeForHalfWay(
     t1: Double, v1: Double,
     t2: Double, v2: Double,
     t3: Double, v3: Double
-): Double = TODO()
+) {
+    var a = (t1 * v1 + t2 * v2 + t3 * v3) / 2
+    var b1 = t1 * v1
+    var b2 = t2 * v2
+    var b3 = t3 * v3
+    var a2 = b1 + b2
+    var a3 = b1 + b2 + b3
+    if (a < b1) println(t1)
+    if (a > b1) {
+        if (a < a2) println(t2)
+    }
+    if (a > a3) println(t3)
+}
 
 /**
  * Простая
@@ -117,7 +129,24 @@ fun rookOrBishopThreatens(
  * прямоугольным (вернуть 1) или тупоугольным (вернуть 2).
  * Если такой треугольник не существует, вернуть -1.
  */
-fun triangleKind(a: Double, b: Double, c: Double): Int = TODO()
+fun triangleKind(a: Double, b: Double, c: Double): Int{
+    if (a > b) {
+        if (a > c) {
+            var x = a * a
+            var y = b * b + c * c
+            var z = a + b
+            var v = a - b
+            if (x > y) return 2
+            if (x == y) return 1
+            if (x < y) return 0
+            if (z < c) {
+                if (v > c) return -1
+            }
+        }
+
+
+
+}
 
 /**
  * Средняя
